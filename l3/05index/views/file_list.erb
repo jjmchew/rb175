@@ -1,0 +1,46 @@
+<!-- ================== file_list.erb ================== -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      ul {
+        font-size: 1.3rem;
+      }
+      a {
+        text-decoration: none;
+        padding: none;
+      }
+      .buttons {
+        display: flex;
+        align-items: baseline;
+      }
+      .up,
+      .down {
+        margin: 5px;
+        padding: 5px;
+        background: #ccc;
+        color: white;
+        border-radius: 9px
+      }
+     
+    </style>
+  </head>
+  <body>
+    <h1>Files in current project folder</h1>
+    <div class="buttons">
+      Display order: 
+      <a class="up" href="/">asc</a>
+      <a class="down" href="/?sort=down">desc</a>
+    </div>
+    <ul>
+      <% @files.each do |file| %>
+        <li><a href="<%= file %>"><%= file %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

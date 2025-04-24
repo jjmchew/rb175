@@ -1,0 +1,51 @@
+html{
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+em {
+  font-style: italic;
+}
+
+.flash {
+  background: lemonchiffon;
+  padding: 1rem;
+  margin: 2rem 0;
+  color: black;
+}
+
+ul {
+  color: black;
+  list-style-type: disc;
+  line-height: 1.3rem;
+  margin: 0 0 2rem 1rem;
+}
+
+.edit_page label,
+.edit_page textarea {
+  display: block;
+}
+
+.delete_link {
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: rgb(0, 102, 204);
+}
+
+.block {
+  display: block;
+}
+
+.inline_block {
+  display: inline-block;
+}

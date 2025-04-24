@@ -1,0 +1,38 @@
+<!-- ================== contents.erb ================== -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+      html {
+        font-family: monospace, sans-serif;
+      }
+      ol {
+        list-style:none;
+        counter-reset: custom-counter;
+      }
+      li {
+        counter-increment: custom-counter;
+        color: black;
+      }
+      li::before {
+        content: counter(custom-counter);
+        font-size: 0.7rem;
+        color: #999;
+        margin-right: 20px;
+      }
+      a {
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="/">project folder /</a> <%= @file %></h1>
+    <ol>
+      <% @content.each do |line| %>
+        <li><%= line %></li>
+      <% end %>
+    </ol>
+  </body>
+</html>

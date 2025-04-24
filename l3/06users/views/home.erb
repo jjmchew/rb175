@@ -1,0 +1,10 @@
+<h1>Current users</h1>
+<ul>
+  <% @users.keys.each do |key| %>
+  <li>
+    <a href="/<%= key.to_s %>">
+      <%= key.to_s.capitalize %>
+    </a>
+  </li>
+  <% end %>
+</ul>

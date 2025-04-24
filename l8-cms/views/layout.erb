@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>CMS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/css-reset.css">
+    <link rel="stylesheet" href="/stylesheets/cms.css">
+    <%# <script src="/javascripts/jquery-2.2.4.js"></script>
+    <script src="/javascripts/application.js"></script> %>
+  </head>
+  <body>
+    <header>
+      <h1>CMS</h1>
+    </header>
+
+    <% if session[:message] %>
+      <div class="flash message">
+        <p><%= session.delete(:message) %></p>
+      </div>
+    <% end %>
+
+    <main>
+      <%== yield %>
+    </main>
+  </body>
+</html>

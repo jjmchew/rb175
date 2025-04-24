@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Users and Interests</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+  </head>
+  <body>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>There are <%= @count[:users] %> users with a total of <%= @count[:interests] %> interests.</p>
+    </footer>
+  </body>
+</html>

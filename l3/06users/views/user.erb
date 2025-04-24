@@ -1,0 +1,17 @@
+<h1><%= @user.to_s.capitalize %>'s page</h1>
+<h2>Email</h2>
+<p><%= @info[:email] %></p>
+
+<h2>Interests</h2>
+<p>
+  <%= @info[:interests].join(", ") %>
+</p>
+
+<aside>
+<h3>Other users</h3>
+<% @users.keys.each do |key| %>
+  <% if key != @user.to_sym %>
+    <a href="/<%= key.to_s %>"><%= key.to_s.capitalize %></a>
+  <% end %>
+<% end%>
+</aside>

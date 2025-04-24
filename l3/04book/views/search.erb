@@ -1,0 +1,33 @@
+<h2 class="content-subhead">Search</h2>
+
+<form action="<%= B %>/search" method="get">
+  <input name="query" value="<%= params[:query] %>">
+  <button type="submit">Search</button>
+</form>
+
+<% if @results.nil? %>
+  <!-- display nothing -->
+<% elsif @results.empty? %>
+  <p>Sorry, no matches were found.</p>
+<% else %>
+  <br>
+  <h2 class="content-subhead">Results for "<%= params[:query] %>"</h2>
+  <ul>
+    <% @results.each do |result| %>
+      <li>
+        <!-- <a href="/chapters/<%= result[:chptr_num] %>"> -->
+        <%= result[:chptr_title] %>
+        <!-- </a> -->
+        <ul>
+          <% unless result[:paras].nil? %>
+            <% result[:paras].each do |para| %>
+              <li class="quote_bullet">
+                <a href="<%= B %>/chapters/<%= result[:chptr_num] %>#paragraph<%= para[:para_num] %>"><%= para[:para_txt] %></a>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </li>
+    <% end%>
+  </ul>
+<% end %>

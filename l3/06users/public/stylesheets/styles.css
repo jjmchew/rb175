@@ -1,0 +1,49 @@
+@import url("css-reset.css");
+
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main,
+footer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+}
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0 0.3rem 0;
+}
+h3 {
+  font-weight: bold;
+  color: #333;
+  margin: 0.2rem 0;
+}
+p {
+  padding: 0.3rem 0;
+}
+ul {
+  list-style: disc;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+aside {
+  margin: 10rem 0 0 0;
+}
+aside a {
+  margin: 0 1rem 0 0;
+}
+footer {
+  background: #e7e7e7;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+}
